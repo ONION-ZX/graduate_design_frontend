@@ -34,13 +34,13 @@ Vue.config.productionTip = false;
 
 const router = new Router({
   routes: [
-    { path: '/', component: Home },
-    { path: '/login', component: Login },
-    { path: '/signup', component: Signup },
-    { path: '/detail/:id', component: Detail },
-    { path: '/me', component: Me },
-    { path: '/search-result', component: SearchResult},
-    { path: '/publish', component: Publish},
+    { path: '/', component: Home, meta : { title : 'vvrtade' }},
+    { path: '/login', component: Login, meta:{title:'vvtrade/login'}},
+    { path: '/signup', component: Signup, meta:{title:'vvtrade/signup'} },
+    { path: '/detail/:id', component: Detail, meta:{title:'vvtrade/detail'} },
+    { path: '/me', component: Me, meta:{title:'vvtrade/me'} },
+    { path: '/search-result', component: SearchResult, meta:{title:'vvtrade/result'}},
+    { path: '/publish', component: Publish, meta:{title:'vvtrade/publish'} },
     {
       path: '/admin',
       component: AdminBase,
@@ -108,6 +108,7 @@ router.beforeEach((to, from, next) => {
      next('/login');
    } else
      next();
+    document.title = to.meta.title;
   });
 
 new Vue({
