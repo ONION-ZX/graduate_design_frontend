@@ -25,12 +25,12 @@
           <div v-if="step == 2">
             <h1>怎么联系你？</h1>
             <div class="input-control">
-              <label>请输入您的手机号</label>
-              <input v-validator="'required|cellphone'"
+              <input v-validator="'required|telephone'"
                      error-el="#phone-error"
                      v-model="current.phone"
-                     :key="'phone'"
-                     type="text">
+                     :key="'telephone'"
+                     type="text"
+                     placeholder="请输入您的手机号">
               <div class="error-list">
                 <div id="phone-error"></div>
               </div>

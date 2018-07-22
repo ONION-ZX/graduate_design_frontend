@@ -2,7 +2,7 @@
 function rand(min=0, max=100, precision=2) {
     return (Math.random() * (max - min) + min).toFixed(precision);
 }
-function rand_int() {
+function rand_int(min, max) {
     return Math.round(rand(min, max));
 }
 
@@ -52,4 +52,8 @@ function title(brand, model) {
     let type = list[rand_int(0,list.length - 1)];
 
     return `${brand || ''} ${model} ${int} 成心 ${year} ${type}`;
+}
+
+export default {
+    title, price, reason, rand_date, rand_deadline, rand_bool, consumed, rand_int
 }
