@@ -138,20 +138,21 @@
         </div>
         
       </div>
-    </div>   
-    </div>
+    </div>  
+    <Footer/> 
+  </div>
 </template>
 
 <script>
   import Nav       from '../components/Nav';
+  import Footer       from '../components/Footer';
+
   import SearchBar from '../components/SearchBar';
   import ReportPanel from '../components/ReportPanel';
   import validator from '../directive/validator.js';  
 
   import api       from '../lib/api';
   import session       from '../lib/session';
-
-
 
 
   export default {
@@ -163,7 +164,7 @@
       this.prepare_appo_row();
       this.has_appointed();
     },
-    components : { Nav, SearchBar, ReportPanel },
+    components : { Nav, SearchBar, ReportPanel, Footer },
     data() {
       return {
         show_appo: false,
