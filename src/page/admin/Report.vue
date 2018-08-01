@@ -105,7 +105,7 @@
         model      : 'report',
         searchable : [ 'title' ],
         with       : [
-            {model: 'vehicle', type: 'has_one'},
+            {model: 'vehicle', relation: 'has_one'},
         ],
         total_check: 0,
       };

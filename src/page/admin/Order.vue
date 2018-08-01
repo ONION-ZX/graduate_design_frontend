@@ -84,8 +84,8 @@
            model: 'order',
            searchable : ['remark'],
            with: [
-               {type: 'has_one', model: 'user'},
-               {type: 'has_one', model: 'vehicle'},
+               {relation: 'has_one', model: 'user'},
+               {relation: 'has_one', model: 'vehicle'},
            ]
          }
        },

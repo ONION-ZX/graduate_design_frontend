@@ -176,10 +176,10 @@
            model: 'vehicle',
            searchable : ['title','description'],
            with: [
-               {type: 'has_one', model: 'user'},
-               {type: 'has_one', model: 'brand'},
-               {type: 'has_one', model: 'design'},
-               {type: 'has_one', model: 'model'},
+               {relation: 'has_one', model: 'user'},
+               {relation: 'has_one', model: 'brand'},
+               {relation: 'has_one', model: 'design'},
+               {relation: 'has_one', model: 'model'},
            ]
          }
        },
