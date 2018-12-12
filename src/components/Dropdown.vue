@@ -1,7 +1,8 @@
 <template>
   <div @mouseleave="show_menu=false" class="dropdown">
-    <input
+    <input @mouseenter="show_menu=true"
            @focus="show_menu=true"
+           @keyup="show_menu=true"
            v-model="keyword"
            :placeholder="placeholder"
            type="search"
@@ -73,6 +74,11 @@
         };
       },
 
+      on_edit(row) {
+        if(!row)
+          this.selected = {};
+        this.selected = row;
+      },
       /**
        * 重置组件
        */

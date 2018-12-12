@@ -14,12 +14,11 @@
         <div v-if="!uinfo">
           <router-link  class="nav-item" to="/login">登录</router-link>
           <router-link  class="nav-item" to="/signup">注册</router-link>
-
         <SearchBar/>
         </div>
         <div v-else>
-          <span class="nav-item user" to="/login">{{uinfo.username}}</span>
-          <span @click="logout" class="nav-item" to="/signup">登出</span>
+          <span class="nav-item user">{{uinfo.username}}</span>
+          <span @click="logout" class="nav-item">登出</span>
           <router-link class="nav-item" to="/publish">发布二手车</router-link>
         <SearchBar/>
         </div>

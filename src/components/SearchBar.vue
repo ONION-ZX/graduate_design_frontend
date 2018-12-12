@@ -1,5 +1,5 @@
 <template>
-  <form class="search-bar" @submit="search($event);submit($event)" v-if="show_form">
+  <form class="search-bar" @submit.prevent="search();submit()" v-if="show_form">
     <input type="search"
            placeholder="搜"
            @keyup="change"
@@ -27,8 +27,7 @@
         if(this.onChangeSubmit)
           this.onSubmit(this.kwd);
       },
-      search(e) {
-        e.preventDefault();
+      search() {
         this.$router.push({
           path: '/search-result',
           query: {keyword:this.kwd},

@@ -175,7 +175,7 @@ export default {
             where: {
               and: [
                 ['price', '<', 10],
-              ['price', '>', 5],
+                ['price', '>', 5],
               ],
             }
           };

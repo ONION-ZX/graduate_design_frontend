@@ -245,8 +245,7 @@
         p.price_min && (price_min_query = `and "price" >= ${p.price_min}`);
         p.price_max && (price_max_query = `and "price" <= ${p.price_max}`);
 
-        let query =
-              `where("title" contains "${p.keyword || ''}" ${brand_query} ${design_query} ${price_min_query} ${price_max_query})`;
+        let query = `where("title" contains "${p.keyword || ''}" ${brand_query} ${design_query} ${price_min_query} ${price_max_query})`;
 
         api('vehicle/read', { query : query, sort_by : p.sort_by, limit : 3, page: p.page, limit: this.limit })
           .then(r => {
